@@ -90,7 +90,8 @@ class PokeneaController extends Controller
 
         return response()->json(
             $viewData = [
-                'pokenea' => PokeneaController::$pokeneas[$pokeneaIndex],
+                'frase' => PokeneaController::$pokeneas[$pokeneaIndex]['frase'],
+                'imagen' => PokeneaController::$pokeneas[$pokeneaIndex]['imagen'],
                 'contenedor' => gethostbyname(gethostname()),
             ]
         );
